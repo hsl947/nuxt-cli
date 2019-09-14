@@ -1,0 +1,49 @@
+{
+  "name": "nuxt-cli",
+  "version": "1.0.0",
+  "description": "the newest nuxt-cli demo",
+  "author": "hsl947",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env mode=dev nuxt",
+    "build": "cross-env mode=pro nuxt build",
+    "start": "cross-env mode=pro nuxt start",
+    "generate": "cross-env mode=pro nuxt generate",
+    "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.1.10",
+    "nuxt": "^2.0.0",
+    "vuex-persistedstate": "^2.5.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "prettier": "^1.16.4",
+    "husky": "^2.6.0",
+    "lint-staged": "^8.2.1",
+    "babel-plugin-component": "^1.1.1",
+    "nodemon": "^1.18.9",
+    "cross-env": "^5.2.1",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "scss": "^0.2.4",
+    "scss-loader": "^0.0.1"
+  }
+}
