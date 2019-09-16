@@ -13,12 +13,12 @@ export default {
   components: {
     week
   },
-  data() {
+  data () {
     return {}
   },
-  created() {},
+  created () {},
   methods: {
-    selectDate(item) {
+    selectDate (item) {
       console.log(`当前选择的日期是${item.fullDate}`)
     }
   }

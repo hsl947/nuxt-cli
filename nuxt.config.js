@@ -59,7 +59,7 @@ export default {
    */
   proxy: {
     '/api': {
-      target: 'https://www.hongshaoli.com',
+      target: env[process.env.mode].BASE_URL,
       pathRewrite: {
         '^/api': '/',
         changeOrigin: true
@@ -74,7 +74,7 @@ export default {
      ** You can extend webpack config here
      */
     extractCSS: { allChunks: true },
-    extend(config, ctx) {}
+    extend (config, ctx) {}
   },
   server: {
     port: 8888, // default: 3000

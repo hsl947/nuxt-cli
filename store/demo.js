@@ -10,14 +10,14 @@ export const state = () => {
 }
 
 export const mutations = {
-  addNum(state, action) {
+  addNum (state, action) {
     state.num += action
   }
 }
 
 export const actions = {
   // 加
-  async add({ commit }, params = {}) {
+  async add ({ commit }, params = {}) {
     await commit('addNum', 2)
   }
 }

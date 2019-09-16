@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       currentFirstDate: '',
       todayDate: '',
@@ -32,26 +32,26 @@ export default {
     }
   },
 
-  created() {
+  created () {
     this.setNowDate()
   },
   methods: {
-    setNowDate() {
+    setNowDate () {
       this.todayDate = this.formatDate(new Date())
       this.setDates(new Date())
     },
-    getNowDate() {
+    getNowDate () {
       const now = new Date()
       const year = now.getFullYear()
       const month = this.isGt10(now.getMonth() + 1)
       const day = this.isGt10(now.getDate())
       return year + month + day
     },
-    isGt10(v) {
+    isGt10 (v) {
       return v < 10 ? `0${v}` : v
     },
     // 日期格式处理
-    formatDate(date) {
+    formatDate (date) {
       const year = date.getFullYear()
       const month = this.isGt10(date.getMonth() + 1)
       const day = this.isGt10(date.getDate())
@@ -66,12 +66,12 @@ export default {
     },
 
     //
-    addDate(date, n) {
+    addDate (date, n) {
       date.setDate(date.getDate() + n)
       return date
     },
     //
-    setDates(date) {
+    setDates (date) {
       const week = date.getDay() - 1
       week === -1
         ? (date = this.addDate(date, -6))
@@ -89,22 +89,22 @@ export default {
       }
     },
     // 上一周
-    lastclick() {
+    lastclick () {
       this.weekDayArr = []
       this.setDates(this.addDate(this.currentFirstDate, -7))
     },
     // 下一周
-    nextclick() {
+    nextclick () {
       this.weekDayArr = []
       this.setDates(this.addDate(this.currentFirstDate, 7))
     },
     // 回到今天
-    nowclick() {
+    nowclick () {
       this.weekDayArr = []
       this.setNowDate()
     },
     //  选择日期
-    selectDate(item) {
+    selectDate (item) {
       this.$emit('selectDate', item)
     }
   }

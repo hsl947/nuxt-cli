@@ -6,10 +6,9 @@
     <!-- <button @click="$store.dispatch('demo/add')">点击加2</button> -->
 
     <a-button
-      type="primary"
-      style="fontSize:30px;color:red;"
+      class="dddddddsssaaa"
       @click="$store.dispatch('demo/add')"
-      >点击加2</a-button
+    >点击加2</a-button
     >
     <div>{{ list }}</div>
   </div>
@@ -17,20 +16,20 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       list: []
     }
   },
-  asyncData({ $axios }) {
+  asyncData ({ $axios }) {
     return $axios.post(`/list`).then((res) => {
       return {
         list: res.data
       }
     })
   },
-  created() {},
-  mounted() {
+  created () {},
+  mounted () {
     this.$axios.post(`/list`).then((res) => {
       console.log(res)
     })

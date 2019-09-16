@@ -7,12 +7,12 @@
 export default {
   name: '404',
   components: {},
-  data() {
+  data () {
     return {}
   },
   watch: {},
-  created() {},
-  mounted() {},
+  created () {},
+  mounted () {},
   methods: {}
 }
 </script>
