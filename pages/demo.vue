@@ -5,6 +5,7 @@
     <!-- <button @click="$store.dispatch('demo/add')">点击加2</button> -->
 
     <a-button
+      type="primary"
       class="dddddddsssaaa"
       @click="open"
     >开</a-button

@@ -5,6 +5,7 @@
     </client-only>
     <nuxt-link to="/demo">to demo</nuxt-link>
   </div>
+
 </template>
 
 <script>
