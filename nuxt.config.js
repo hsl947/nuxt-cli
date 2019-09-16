@@ -32,7 +32,8 @@ export default {
   plugins: [
     '@/plugins/antd-ui',
     '@/plugins/axios',
-    { src: '~/plugins/localStorage', ssr: false }
+    { src: '~/plugins/localStorage', ssr: false },
+    '@/plugins/index'
   ],
   /*
    ** Nuxt.js dev-modules

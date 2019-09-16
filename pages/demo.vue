@@ -6,16 +6,23 @@
 
     <a-button
       class="dddddddsssaaa"
-      @click="$store.dispatch('demo/add')"
-
-    >点击加2</a-button
+      @click="open"
+    >开</a-button
     >
-    <div>{{ list }}</div>
+    <a-button
+      class="dddddddsssaaa"
+      @click="close"
+    >关</a-button
+    >
+    <!-- <div>{{ list }}</div> -->
   </div>
 </template>
 
 <script>
 export default {
+  components: {
+
+  },
   data () {
     return {
       list: []
@@ -31,10 +38,17 @@ export default {
   created () {},
   mounted () {
     this.$axios.post(`/list`).then((res) => {
-      console.log(res)
+      // console.log(res)
     })
   },
-  methods: {}
+  methods: {
+    open () {
+      this.$UserModal(true)
+    },
+    close () {
+      this.$UserModal(false)
+    }
+  }
 }
 </script>
 
