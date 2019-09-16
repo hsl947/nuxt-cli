@@ -1,3 +1,5 @@
+import { vue } from './antd-ui'
+
 export default function({ $axios, redirect }) {
   const token = `asdfghjkl11111111111111111111111111111111`
   $axios.setHeader('x-Token', token)
@@ -12,6 +14,9 @@ export default function({ $axios, redirect }) {
   // 添加响应拦截器
   $axios.onResponse((config) => {
     console.log(`res---`, config)
+    if (process.client) {
+      vue.$message.info('This is a normal message')
+    }
   })
 
   // 添加请求错误拦截器

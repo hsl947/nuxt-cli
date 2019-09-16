@@ -2,9 +2,15 @@
   <div class="table_box">
     {{ $store.state.num }}
     <button @click="$store.dispatch('add')">点击加1</button>
-
     {{ $store.state.demo.num }}
-    <button @click="$store.dispatch('demo/add')">点击加2</button>
+    <!-- <button @click="$store.dispatch('demo/add')">点击加2</button> -->
+
+    <a-button
+      type="primary"
+      style="fontSize:30px;color:red;"
+      @click="$store.dispatch('demo/add')"
+      >点击加2</a-button
+    >
     <div>{{ list }}</div>
   </div>
 </template>
@@ -18,7 +24,9 @@ export default {
   },
   asyncData({ $axios }) {
     return $axios.post(`/list`).then((res) => {
-      return { list: res.data }
+      return {
+        list: res.data
+      }
     })
   },
   created() {},
