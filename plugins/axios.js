@@ -1,4 +1,4 @@
-// import { vue } from './antd-ui'
+// import { vue } from './index'
 
 export default function ({ $axios, redirect }) {
   const token = `asdfghjkl11111111111111111111111111111111`

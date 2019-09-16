@@ -4,8 +4,13 @@
     <button @click="$store.dispatch('add')">点击加1</button>
     <!-- <button @click="$store.dispatch('demo/add')">点击加2</button> -->
 
-    <a-button type="primary" @click="$store.dispatch('demo/add')">点击加2</a-button>
-    <!-- <div>{{ list }}</div> -->
+    <a-button
+      class="dddddddsssaaa"
+      @click="$store.dispatch('demo/add')"
+
+    >点击加2</a-button
+    >
+    <div>{{ list }}</div>
   </div>
 </template>
 

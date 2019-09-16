@@ -59,7 +59,7 @@ export default {
    */
   proxy: {
     '/api': {
-      target: 'https://www.hongshaoli.com',
+      target: env[process.env.mode].BASE_URL,
       pathRewrite: {
         '^/api': '/',
         changeOrigin: true
