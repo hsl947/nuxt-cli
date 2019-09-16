@@ -1,6 +1,6 @@
-import { vue } from './antd-ui'
+// import { vue } from './antd-ui'
 
-export default function({ $axios, redirect }) {
+export default function ({ $axios, redirect }) {
   const token = `asdfghjkl11111111111111111111111111111111`
   $axios.setHeader('x-Token', token)
   $axios.setToken(token)
@@ -15,7 +15,7 @@ export default function({ $axios, redirect }) {
   $axios.onResponse((config) => {
     console.log(`res---`, config)
     if (process.client) {
-      vue.$message.info('This is a normal message')
+      // vue.$message.info('This is a normal message')
     }
   })
 

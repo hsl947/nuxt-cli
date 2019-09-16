@@ -74,7 +74,7 @@ export default {
      ** You can extend webpack config here
      */
     extractCSS: { allChunks: true },
-    extend(config, ctx) {}
+    extend (config, ctx) {}
   },
   server: {
     port: 8888, // default: 3000
