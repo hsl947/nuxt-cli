@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-cli",
+  "name": "88-score",
   "version": "1.0.0",
-  "description": "the newest nuxt-cli demo",
+  "description": "88比分网",
   "author": "hsl947",
   "private": true,
   "scripts": {

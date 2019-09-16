@@ -1,6 +1,5 @@
 <template>
   <div class="table_box">
-    {{ weekDayArr }}
     <div>
       <button @click="lastclick">上一周</button>
       <span>{{ todayDate.date }}({{ todayDate.day }})</span>

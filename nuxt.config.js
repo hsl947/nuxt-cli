@@ -26,14 +26,13 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['ant-design-vue/dist/antd.less'],
+  css: ['ant-design-vue/dist/antd.less', './static/css/reset.css'],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '@/plugins/antd-ui',
-    '@/plugins/axios',
-    { src: '~/plugins/localStorage', ssr: false }
+    '@/plugins/index',
+    { src: '~/plugins/localStorage', ssr: false } // ssr=false才能持久化
   ],
   /*
    ** Nuxt.js dev-modules
@@ -74,7 +73,27 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extractCSS: { allChunks: true },
+    // extractCSS: { allChunks: true },
+    splitChunks: {
+      chunks: 'async',
+      minSize: 30000, // 模块的最小体积
+      minChunks: 1, // 模块的最小被引用次数
+      maxAsyncRequests: 5, // 按需加载的最大并行请求数
+      maxInitialRequests: 3, // 一个入口最大并行请求数
+      automaticNameDelimiter: '~', // 文件名的连接符
+      name: true,
+      cacheGroups: { // 缓存组
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    },
     extend (config, ctx) {},
     loaders: {
       less: {
