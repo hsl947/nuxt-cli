@@ -1,4 +1,4 @@
-import { vue } from './index'
+// import { vue } from './index'
 
 export default function ({ $axios, redirect }) {
   const token = `asdfghjkl11111111111111111111111111111111`
@@ -15,7 +15,7 @@ export default function ({ $axios, redirect }) {
   $axios.onResponse((config) => {
     // console.log(`res---`, config)
     if (process.client) {
-      vue.$message.info('This is a normal message')
+      // vue.$message.info('This is a normal message')
     }
   })
 
