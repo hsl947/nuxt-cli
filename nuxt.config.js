@@ -1,4 +1,5 @@
-const env = require('./env.config')
+const env = require('./env.config') // 全局环境接口配置
+const { THEME } = require('./plugins/antd-theme') // 自定义主题
 
 export default {
   mode: 'universal',
@@ -25,7 +26,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['ant-design-vue/dist/antd.css'],
+  css: ['ant-design-vue/dist/antd.less'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -74,7 +75,13 @@ export default {
      ** You can extend webpack config here
      */
     extractCSS: { allChunks: true },
-    extend (config, ctx) {}
+    extend (config, ctx) {},
+    loaders: {
+      less: {
+        javascriptEnabled: true,
+        modifyVars: THEME
+      }
+    }
   },
   server: {
     port: 8888, // default: 3000

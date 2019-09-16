@@ -7,13 +7,13 @@ export default function ({ $axios, redirect }) {
 
   // 添加请求拦截器
   $axios.onRequest((config) => {
-    console.log(`req---`, config)
+    // console.log(`req---`, config)
     config.timeout = 10000
   })
 
   // 添加响应拦截器
   $axios.onResponse((config) => {
-    console.log(`res---`, config)
+    // console.log(`res---`, config)
     if (process.client) {
       vue.$message.info('This is a normal message')
     }
