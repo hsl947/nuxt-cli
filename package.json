@@ -21,8 +21,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^1.1.10",
-    "nuxt": "^2.0.0",
-    "vuex-persistedstate": "^2.5.4"
+    "nuxt": "^2.9.2"
   },
   "devDependencies": {
     "@nuxtjs/axios": "^5.3.6",

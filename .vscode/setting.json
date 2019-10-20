@@ -1,0 +1,39 @@
+{
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "search.followSymlinks": false,
+  "vetur.validation.template": false,
+  "editor.wordWrap": "on",
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": false,
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".vue"
+    ],
+    "plugins": [
+      "html",
+      "vue"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    "javascriptreact",
+    "html",
+    "vue"
+  ],
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true
+  }
+}

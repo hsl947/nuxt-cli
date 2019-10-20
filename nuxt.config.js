@@ -15,7 +15,9 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
-      }
+      },
+      { name: 'renderer', content: 'webkit' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -31,8 +33,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '@/plugins/index',
-    { src: '~/plugins/localStorage', ssr: false } // ssr=false才能持久化
+    '@/plugins/index'
   ],
   /*
    ** Nuxt.js dev-modules
